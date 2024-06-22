@@ -1,0 +1,5 @@
+app.landing:
+    methods: GET
+    path: /
+    defaults:
+        _controller: app.landing.landing_controller

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div>
+        <h1>Thank you for taking the product!</h1>
+        <p>We will contact you.</p>
+        <p style="margin-top: 20px;">
+            <a href="{{ path('app.landing') }}" class="btn btn-primary">Go back to the homepage</a>
+        </p>
+    </div>
+{% endblock %}

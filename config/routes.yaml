@@ -1,0 +1,2 @@
+components:
+    resource: ../src/*/config/routes.yml

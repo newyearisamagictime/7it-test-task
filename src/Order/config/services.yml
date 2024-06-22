@@ -1,0 +1,31 @@
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    App\Order\Entity:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/Order/Entity'
+                        prefix: 'App\Order\Entity'
+                        alias: AppOrder
+
+twig:
+    paths:
+        '%kernel.project_dir%/src/Order/templates': order
+
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: false
+        public: false
+
+    app.order.order_submit_controller:
+        class: App\Order\OrderSubmitController
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@mailer.mailer'
+
+    app.order.thank_you_controller:
+        class: App\Order\ThankYouController
+        tags: ['controller.service_arguments']

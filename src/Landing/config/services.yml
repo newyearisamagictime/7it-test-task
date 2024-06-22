@@ -1,0 +1,13 @@
+twig:
+    paths:
+        '%kernel.project_dir%/src/Landing/templates': landing
+
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: false
+        public: false
+
+    app.landing.landing_controller:
+        class: App\Landing\LandingController
+        tags: ['controller.service_arguments']

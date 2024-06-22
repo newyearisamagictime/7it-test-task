@@ -1,0 +1,11 @@
+app.order_submit:
+    methods: POST
+    path: /order
+    defaults:
+        _controller: app.order.order_submit_controller
+
+app.order_thank_you:
+    methods: GET
+    path: /order/thank-you
+    defaults:
+        _controller: app.order.thank_you_controller
